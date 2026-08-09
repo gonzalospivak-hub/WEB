@@ -721,3 +721,18 @@ img { max-width: 100%; display: block; }
   .section__head--row { justify-content: flex-start; }
   .filters { width: 100%; }
 }
+
+/* Enlaces legales del footer */
+.footer__links--legal { gap: 20px; }
+
+.footer__links--legal a {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--cream-70);
+}
+
+.footer__links--legal a:hover { color: var(--lime); }
+
+.footer__legal { max-width: 340px; }

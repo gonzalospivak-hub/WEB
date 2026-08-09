@@ -1,0 +1,221 @@
+/* Páginas legales — hereda los tokens de :root definidos en styles.css */
+
+.legal-body {
+  background: var(--cream);
+  color: var(--olive-dark);
+  font-family: var(--font-body);
+  line-height: 1.65;
+}
+
+.legal-top {
+  background: var(--olive-deep);
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.legal-top .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.legal-top__brand {
+  font-family: var(--font-display);
+  color: var(--lime);
+  font-size: 15px;
+  letter-spacing: .04em;
+  text-decoration: none;
+}
+
+.legal-top__back {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--cream-80);
+  text-decoration: none;
+  border: 1px solid rgba(244, 242, 230, .28);
+  border-radius: 999px;
+  padding: 7px 15px;
+  transition: background .18s ease, color .18s ease;
+}
+
+.legal-top__back:hover {
+  background: var(--lime);
+  color: var(--olive-deep);
+  border-color: var(--lime);
+}
+
+.legal-wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 56px 22px 90px;
+}
+
+.legal-kicker {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted-b);
+  margin-bottom: 14px;
+}
+
+.legal-wrap h1 {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 6vw, 46px);
+  line-height: 1.05;
+  color: var(--olive-deep);
+  margin: 0 0 18px;
+}
+
+.legal-updated {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted-b);
+  padding-bottom: 26px;
+  margin-bottom: 34px;
+  border-bottom: 2px solid var(--dark-16);
+}
+
+.legal-wrap h2 {
+  font-family: var(--font-display);
+  font-size: clamp(19px, 3.2vw, 24px);
+  line-height: 1.2;
+  color: var(--olive-mid);
+  margin: 46px 0 14px;
+}
+
+.legal-wrap h3 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--olive-mid);
+  margin: 28px 0 10px;
+}
+
+.legal-wrap p,
+.legal-wrap li {
+  font-size: 16px;
+  color: var(--olive-dark);
+}
+
+.legal-wrap p { margin: 0 0 14px; }
+
+.legal-wrap ul,
+.legal-wrap ol { margin: 0 0 18px; padding-left: 22px; }
+
+.legal-wrap li { margin-bottom: 8px; }
+
+.legal-wrap a {
+  color: var(--muted-a);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.legal-wrap a:hover { color: var(--olive); }
+
+.legal-wrap strong { color: var(--olive-deep); }
+
+/* Ficha de datos del responsable */
+.legal-card {
+  background: var(--wash);
+  border: 2px solid var(--olive-dark);
+  border-radius: 14px;
+  padding: 22px 24px;
+  margin: 0 0 30px;
+}
+
+.legal-card dl {
+  display: grid;
+  grid-template-columns: minmax(150px, auto) 1fr;
+  gap: 9px 18px;
+  margin: 0;
+}
+
+.legal-card dt {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--muted-b);
+  padding-top: 2px;
+}
+
+.legal-card dd {
+  margin: 0;
+  font-size: 15px;
+  color: var(--olive-deep);
+  font-weight: 500;
+}
+
+@media (max-width: 560px) {
+  .legal-card dl { grid-template-columns: 1fr; gap: 3px; }
+  .legal-card dd { margin-bottom: 11px; }
+}
+
+/* Aviso destacado */
+.legal-note {
+  background: rgba(212, 227, 106, .3);
+  border-left: 4px solid var(--olive);
+  border-radius: 0 10px 10px 0;
+  padding: 16px 20px;
+  margin: 0 0 22px;
+}
+
+.legal-note p:last-child { margin-bottom: 0; }
+
+/* Texto legal obligatorio (Disposición 10/2008) */
+.legal-quote {
+  font-size: 14.5px;
+  font-style: italic;
+  color: var(--muted-a);
+  border-left: 3px solid var(--dark-25);
+  padding: 4px 0 4px 18px;
+  margin: 0 0 20px;
+}
+
+.legal-table-wrap { overflow-x: auto; margin: 0 0 22px; }
+
+.legal-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  min-width: 460px;
+}
+
+.legal-wrap th,
+.legal-wrap td {
+  text-align: left;
+  padding: 11px 13px;
+  border-bottom: 1px solid var(--dark-16);
+  vertical-align: top;
+}
+
+.legal-wrap th {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--muted-b);
+  border-bottom: 2px solid var(--dark-25);
+}
+
+.legal-foot {
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 2px solid var(--dark-16);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: .04em;
+  color: var(--muted-b);
+  display: flex;
+  gap: 10px 22px;
+  flex-wrap: wrap;
+}
+
+.legal-foot a { color: var(--muted-b); }
